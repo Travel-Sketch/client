@@ -21,6 +21,14 @@ const NavBar = () => {
     navigate('/plans')
   }
 
+  const clickMyPage = () => {
+    navigate('/mypage')
+  };
+
+  const clickLogin = () => {
+    navigate('/login')
+  };
+
   return (
     <div className={styles.navbar}>
       <div className={styles.leftContainer}>
@@ -38,12 +46,12 @@ const NavBar = () => {
         {token ? (
           <div className={styles.menu}>
             <div>blank</div>
-            <div>마이페이지</div>
+            <div onClick={clickMyPage}>마이페이지</div>
           </div>
         ) : (
           <div className={styles.menu}>
             <div>blank</div>
-            <div>로그인</div>
+            <div onClick={clickLogin}>로그인</div>
           </div>
         )}
       </div>
