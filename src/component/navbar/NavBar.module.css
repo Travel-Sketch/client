@@ -1,0 +1,45 @@
+.navbar {
+    width: 100%;
+    min-width: 1280px;
+    height: 60px;
+    color: #000000;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.leftContainer {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+}
+
+.rightContainer {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.logoImg {
+    height: 40px;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu > div {
+    margin-left: 20px;
+    cursor: pointer;
+    line-height: 1.5;
+}
+
+.menu > div:hover {
+    border-bottom: 2px solid #000000;
+}
