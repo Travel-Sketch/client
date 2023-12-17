@@ -21,6 +21,10 @@ const NavBar = () => {
     navigate('/plans')
   }
 
+  const clickNotice = () => {
+    navigate('/notices')
+  }
+
   const clickMyPage = () => {
     navigate('/mypage')
   };
@@ -40,6 +44,7 @@ const NavBar = () => {
           <div onClick={clickSearchPosts}>자유게시판</div>
           <div onClick={clickSearchHotPlaces}>핫플레이스</div>
           <div onClick={clickTripPlans}>여행계획</div>
+          <div onClick={clickNotice}>공지사항</div>
         </div>
       </div>
       <div className={styles.rightContainer}>
