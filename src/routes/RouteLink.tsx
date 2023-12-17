@@ -3,6 +3,7 @@ import PublicRouter from "./PublicRouter";
 import PrivateRouter from "./PrivateRouter";
 import AttractionPage from "../pages/attraction/AttractionPage";
 import LoginPage from "../pages/auth/LoginPage";
+import RegisterPage from "../pages/auth/RegisterPage";
 
 const RouteLink = () => {
   return (
@@ -10,7 +11,7 @@ const RouteLink = () => {
       <Routes>
         <Route Component={PublicRouter}>
           <Route path='/login' element={<LoginPage />} />
-          <Route path='/signup' element={null} />
+          <Route path='/signup' element={<RegisterPage />} />
           <Route path='/attractions' element={<AttractionPage />} />
         </Route>
         <Route Component={PrivateRouter}>
