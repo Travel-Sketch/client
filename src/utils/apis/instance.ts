@@ -1,21 +1,18 @@
 import axios, {InternalAxiosRequestConfig} from 'axios';
 
 export const instance = axios.create({
-  baseURL: '/api/',
+  baseURL: '/api/v1',
   headers: {
-    'Access-Control-Allow-Origin': '*',
     'Content-Type': 'application/json',
   },
 });
 
 // token 인터셉터
 instance.interceptors.request.use((config: InternalAxiosRequestConfig): InternalAxiosRequestConfig => {
-  const token = localStorage.getItem('token');
-  const modifiedConfig = {...config};
+  const token = localStorage.getItem('accessToken');
 
   if (token) {
-    modifiedConfig.headers.Authorization = `Bearer ${token}`;
-    return modifiedConfig;
+    config.headers.Authorization = `Bearer ${token}`;
   }
 
   return config;
