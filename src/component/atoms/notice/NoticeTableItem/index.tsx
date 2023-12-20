@@ -1,13 +1,22 @@
 import {NoticeTableItemWrapper} from "./style";
+import {INotice} from "../../../../types/notice";
 
-function NoticeTableItem() {
+
+function NoticeTableItem({noticeId, title, createdDate}: INotice) {
+  const clickItem = (noticeId: number) => {
+    console.log(noticeId);
+  };
+
+  const handleItemClick = () => {
+    clickItem(noticeId);
+  }
   return (
-    <NoticeTableItemWrapper>
-      <td>1</td>
-      <td className='title'>공지사항 제목입니다.</td>
-      <td>2023.12.17</td>
+    <NoticeTableItemWrapper onClick={handleItemClick}>
+      <td>{noticeId}</td>
+      <td className='title'>{title}</td>
+      <td>{createdDate}</td>
     </NoticeTableItemWrapper>
-  )
+  );
 }
 
 export default NoticeTableItem;
